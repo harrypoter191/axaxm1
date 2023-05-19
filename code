@@ -1,0 +1,25 @@
+//SPDX-License-Identifier: MIT
+pragma solidity ^0.8.18;
+
+contract errors {
+    function Require(uint _x,uint _y,uint _z) public pure 
+    { _z=_x-_y;
+        require(_z > 0, "Input of first number should greater than second");
+        
+    }
+    uint z;
+    function Revert(uint x,uint y) public {
+        z= x+y;
+        if (z < 10) {
+            revert("Input must be higher such that sum is greater than 10");
+        }
+    }
+
+    uint n;
+    uint a;
+    function Assert(uint b) public view returns(uint) {
+        
+        assert(n > 0);
+        b=a/n;
+        return b;
+    }}
