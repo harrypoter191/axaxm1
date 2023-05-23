@@ -2,24 +2,24 @@
 pragma solidity ^0.8.18;
 
 contract errors {
-    function Require(uint _x,uint _y,uint _z) public pure 
-    { _z=_x-_y;
-        require(_z > 0, "Input of first number should greater than second");
+    function Require(uint x,uint y,uint z) public pure 
+    { z=x-y;
+        require(z > 0, "Input of first number should greater");
         
     }
-    uint z;
+    uint z1;
     function Revert(uint x,uint y) public {
-        z= x+y;
-        if (z < 10) {
-            revert("Input must be higher such that sum is greater than 10");
+        z1= x+y;
+        if (z1 < 1) {
+            revert("Input must be higher such that sum is greater than 1");
         }
     }
 
-    uint n;
+    uint num;
     uint a;
     function Assert(uint b) public view returns(uint) {
         
-        assert(n > 0);
-        b=a/n;
+        assert(num > 0);
+        b=a/num;
         return b;
     }}
